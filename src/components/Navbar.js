@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export class Navbar extends Component {
     render() {
         return (
-            <div className='p-4 border-b-4 flex flex-row justify-center'>
+            <nav className='p-4 border-b-4 flex flex-row justify-center'>
                 <div className='pr-20'>
                     <Link to={'#'}>Company Logo</Link>
                 </div>
@@ -34,7 +34,7 @@ export class Navbar extends Component {
                 </div> */}
 
                
-            </div>
+            </nav>
         )
     }
 }
