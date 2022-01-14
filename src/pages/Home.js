@@ -1,6 +1,7 @@
-import React, { Component,useState,useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import Questions from '../components/Questions';
 
+// fake data
 const data= ['1','2','3','4','5','6','7','8','9'];
 let response ;
 let count ;
@@ -11,39 +12,43 @@ function Home() {
     
     const backHandler =()=>{
         response = [];
+        // checking the condition for possibility for back
         if( 0 < count <= data.length) {
-            
+            // droping the count by 6
             for ( let index=count-6 ;index < count-3; index++) {
-                // const element = array[index];
                 response.push(data[index])
-                
             }
+            // new count position
             count = count - 3;
         }
+        // initializing shorted data for sending to <Questions/> element
         setstate(response);
         
     }
     
     const nextHandler =()=>{
         response = [];
-        if(count < data.length) {
+        // checking the condition for possibility for Next
+        if((count) < (data.length) ) {
             
             for ( let index=count ;index < count+3; index++) {
-                // const element = array[index];
                 response.push(data[index])
-                
             }
+            // new count position
             count = count + 3;
         }
+        // initializing shorted data for sending to <Questions/> element
         setstate(response);
         
     }
     const submitHandler=() => {
-        window.alert('Successfully submitted '); 
+        window.alert('Successfully submitted ');
+        // Refreshing the for new
         window.location.reload();
     }
     
     useEffect(() => {
+        // first time initailizating the count= 0 on mount
         count = 0 ;
         nextHandler();
     }, [])

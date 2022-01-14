@@ -6,7 +6,7 @@ export class Navbar extends Component {
         return (
             <nav className='p-4 border-b-4 flex flex-row justify-center'>
                 <div className='pr-20'>
-                    <Link to={'#'}>Company Logo</Link>
+                    <Link to={'/'}>Company Logo</Link>
                 </div>
 
                 <div className='flex flex-wrap justify-between text-green-400'>
@@ -30,10 +30,6 @@ export class Navbar extends Component {
                         </svg>
                     </Link>
                 </div>
-                {/* <div className='px-4'>
-                </div> */}
-
-               
             </nav>
         )
     }

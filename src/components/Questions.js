@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 export class questions extends Component {
     constructor(props) {
         super(props)
+        // Receiving the data from props
         const { res } =  props;
         this.state = {res: res }
     }
